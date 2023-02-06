@@ -28,6 +28,7 @@ def extract_wwr_jobs(keyword):
                     'location': region.string.replace(",", " "),
                     'position': title.string.replace(",", " ")
                 }
+                print(job_data)
                 try:
                     provider = Provider.objects.get(name="weworkremotely")
                 except Provider.DoesNotExist:
@@ -39,5 +40,6 @@ def extract_wwr_jobs(keyword):
                     link=job_data['link'],
                     provider=provider
                 )
+                print("job created successfully")
                 results.append(job_data)
         return results
