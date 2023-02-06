@@ -167,10 +167,10 @@ AUTH_USER_MODEL = "users.User"
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_FROM='jobportal@localtest.org'
-EMAIL_HOST='smtp.mailgun.org'
+EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
-EMAIL_HOST_USER='postmaster@sandbox059b9fa268cf467a8871fd3e469148f3.mailgun.org'
-EMAIL_HOST_PASSWORD='ff9401a5001f5f655175cc925ee830ac-f7d687c0-e1626eac'
+EMAIL_HOST_USER='sd9575521@gmail.com'
+EMAIL_HOST_PASSWORD=os.getenv("EMAIL_PASSWORD")
 EMAIL_USE_TLS=True
 
 MESSAGE_TAGS = {
